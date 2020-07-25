@@ -15,8 +15,6 @@ function App() {
   
   const addTodo = (event) => {
     event.preventDefault();
-    // setTodos([...todos, input]);
-    // setInput("");
     db.collection('todos').add({
       todo: input,
       timeStamp: firebase.firestore.FieldValue.serverTimestamp()
@@ -62,9 +60,10 @@ function App() {
       <Grid container justify="center">
         <Grid item xs={10} sm={6}>
           <List className="todo-list">
-            {todos.map((todo) => (
+            { todos.map((todo) => (
               <TodoComponent 
                 todo={todo} 
+                key={todo.id}
                 />
             ))}
           </List>

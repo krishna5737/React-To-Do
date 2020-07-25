@@ -10,7 +10,7 @@ This 📽 project was created while 📚learning firebase 🔥
 - [ ] Option to mark task as completed
 - [ ] Option for adding description of task
 - [ ] Option for adding checklist in description
-- [ ] User👤 can edit the task
+- [x] User👤 can edit the task
 - [ ] Login and signup for each user👤
 - [ ] Option for user👤 to create a task list and create the task under any list
 

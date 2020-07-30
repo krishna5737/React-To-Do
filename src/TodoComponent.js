@@ -3,6 +3,7 @@ import {ListItem, ListItemText, IconButton, Checkbox, TextField} from "@material
 import './TodoComponent.css';
 import firebase from "firebase";
 import db from './firebase';
+import Card from '@material-ui/core/Card';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 
 function TodoComponent(props) {
@@ -32,6 +33,7 @@ function TodoComponent(props) {
     const [editing, setEditing] = useState(false);
 
     return (
+    <Card style={{marginTop:"10px"}}>
       <ListItem>
         {!editing ? (
             <>  
@@ -63,6 +65,7 @@ function TodoComponent(props) {
         )}
 
       </ListItem>
+        </Card>
     );
 }
 

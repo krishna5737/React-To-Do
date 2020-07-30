@@ -17,21 +17,20 @@ function App() {
     event.preventDefault();
     db.collection('todos').add({
       todo: input,
-      timeStamp: firebase.firestore.FieldValue.serverTimestamp()
+      timeStamp: firebase.firestore.FieldValue.serverTimestamp(),
+      taskCompleted: true
     });
     setInput("");
-
-
   };
   //fetch new data when app loads
   useEffect(() => {
     // use Effect works as listener and we can provide array list with component which needs to be listened
     db.collection('todos').orderBy('timeStamp','desc').onSnapshot(snapshot => {
-      
       setTodos(snapshot.docs.map(doc=> ({
         todo: doc.data().todo,
         id: doc.id,
-        creationTime: doc.data().timeStamp
+        creationTime: doc.data().timeStamp,
+        taskCompleted: doc.data().taskCompleted
       })))
     })
   }, [])

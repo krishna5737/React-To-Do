@@ -7,7 +7,7 @@ This 📽 project was created while 📚learning firebase 🔥
 - [x] User👤 can delete a task
 - [x] Sort task by Creation date
 - [x] User👤 can view his created tasks
-- [ ] Option to mark task as completed
+- [x] Option to mark task as completed
 - [ ] Option for adding description of task
 - [ ] Option for adding checklist in description
 - [x] User👤 can edit the task

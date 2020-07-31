@@ -34,6 +34,7 @@ function TodoComponent(props) {
 
     return (
     <Card style={{marginTop:"10px"}}>
+        
       <ListItem>
         {!editing ? (
             <>  
@@ -61,7 +62,7 @@ function TodoComponent(props) {
                 </IconButton>
             </>
         ) : (
-            <TextField autoFocus={true} defaultValue={props.todo.todo} data-todoid={props.todo.id} onKeyUp={doneEditing.bind(this)} label={props.todo.todo} />
+            <TextField autoFocus={true} defaultValue={props.todo.todo} data-todoid={props.todo.id} onKeyUp={doneEditing.bind(this)}/>
         )}
 
       </ListItem>

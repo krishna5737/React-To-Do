@@ -26,7 +26,7 @@ function TodoComponent(props) {
             }
             setEditing(false);
         }
-        if (event.keyCode === 13) {
+        if (event.keyCode === 27) {
             setEditing(false);
         }
     };
@@ -61,7 +61,7 @@ function TodoComponent(props) {
                 </IconButton>
             </>
         ) : (
-            <TextField autoFocus={true}  data-todoid={props.todo.id} onKeyUp={doneEditing.bind(this)} label={props.todo.todo} />
+            <TextField autoFocus={true} defaultValue={props.todo.todo} data-todoid={props.todo.id} onKeyUp={doneEditing.bind(this)} label={props.todo.todo} />
         )}
 
       </ListItem>

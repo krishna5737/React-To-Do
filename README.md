@@ -15,4 +15,4 @@ This 📽 project was created while 📚learning firebase 🔥
 - [ ] Option for user👤 to create a task list and create the task under any list
 
 
-You can try current version of product using [Link](https://todo-app-349b9.web.app)
+
